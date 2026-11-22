@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brilliant Classes Sukhpura</title>
+<meta name="app-version" content="2">
+<!--BRILLIANT-CLASSES-APP-->
+<meta name="theme-color" content="#1D2540">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#F6F5F1;--card:#FFFFFF;--ink:#1D2540;--mute:#6A7088;--line:#E3E2DB;--accent:#1D2540;--onaccent:#FFFFFF;--hi:#F4B223;--ok:#1E8E5A;--okbg:#DDF3E8;--bad:#CC3F3F;--badbg:#FBE2E2;--wa:#1FA855;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12162A;--card:#1B2140;--ink:#ECEEF8;--mute:#9AA0BC;--line:#2B3257;--accent:#F4B223;--onaccent:#12162A;--hi:#F4B223;--ok:#5FD39A;--okbg:#17372B;--bad:#FF8A8A;--badbg:#3F1D25;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12162A;--card:#1B2140;--ink:#ECEEF8;--mute:#9AA0BC;--line:#2B3257;--accent:#F4B223;--onaccent:#12162A;--ok:#5FD39A;--okbg:#17372B;--bad:#FF8A8A;--badbg:#3F1D25;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.45 Figtree,system-ui,sans-serif;padding-bottom:112px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;margin:0;letter-spacing:-.01em}
+header{padding:18px 18px 6px;max-width:560px;margin:0 auto}
+header h1{font-size:24px}header p{margin:2px 0 0;color:var(--mute);font-size:13px}
+main{max-width:560px;margin:0 auto;padding:10px 16px}
+.sum{background:var(--accent);color:var(--onaccent);border-radius:16px;padding:16px;margin-bottom:12px}
+.sum b{font:700 28px "Bricolage Grotesque",sans-serif;display:block}.sum span{opacity:.8;font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.name{font-weight:600}.sub{color:var(--mute);font-size:13px}
+.chip{font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px;background:var(--badbg);color:var(--bad);white-space:nowrap}
+.chip.ok{background:var(--okbg);color:var(--ok)}
+.btn{appearance:none;border:0;border-radius:11px;padding:11px 14px;font:600 14px Figtree,sans-serif;cursor:pointer;background:var(--accent);color:var(--onaccent);text-decoration:none;display:inline-block;text-align:center}
+.btn.wa{background:var(--wa);color:#fff}.btn.full{width:100%;margin:4px 0 12px}.btn.sm{padding:7px 11px;font-size:13px}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn:focus-visible,select:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+.pa{display:flex;gap:6px}.pa button{width:42px;height:38px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--mute);font:600 15px Figtree;cursor:pointer}
+.pa button.p.on{background:var(--ok);border-color:var(--ok);color:#fff}.pa button.a.on{background:var(--bad);border-color:var(--bad);color:#fff}
+select{width:100%;padding:11px;border-radius:11px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 15px Figtree;margin-bottom:12px}
+.bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;background:var(--ok);border-radius:99px}
+.bar.bad i{background:var(--bad)}
+.chart{display:flex;align-items:flex-end;gap:8px;height:140px;padding-top:8px}
+.chart div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:12px;color:var(--mute)}
+.chart i{display:block;width:100%;background:var(--line);border-radius:6px 6px 0 0;margin:3px 0}.chart div.last i{background:var(--hi)}
+input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:400 15px Figtree,sans-serif;margin-top:3px;display:block}label{display:block;margin-bottom:8px}input:focus-visible,textarea:focus-visible{outline:3px solid var(--hi);outline-offset:1px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl th,.tbl td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}.tbl th{color:var(--mute);font-weight:600}.wrap{overflow-x:auto}
+.big{font:700 34px "Bricolage Grotesque",sans-serif}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+h2{font-size:17px;margin:14px 0 8px}
+
+
+
+
+#toast{position:fixed;left:16px;right:16px;bottom:calc(100px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:12px 14px;border-radius:12px;font-weight:500;opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none;z-index:30;max-width:528px;margin:auto}
+#toast.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){#toast{transition:none}}
+
+:root{--bar:rgba(255,255,255,.93);--act:rgba(29,37,64,.10);--actc:#1D2540}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bar:rgba(27,33,64,.93);--act:rgba(244,178,35,.18);--actc:#F4B223}}
+:root[data-theme="dark"]{--bar:rgba(27,33,64,.93);--act:rgba(244,178,35,.18);--actc:#F4B223}
+nav{position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-width:536px;margin:0 auto;background:var(--bar);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:34px;display:flex;gap:2px;padding:6px;z-index:20;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+nav button{flex:1;position:relative;border:0;background:transparent;color:var(--ink);font:600 11px Figtree,system-ui,sans-serif;padding:8px 2px 7px;border-radius:26px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
+nav button svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav button[aria-selected=true]{background:var(--act);color:var(--actc)}
+nav button:focus-visible{outline:3px solid var(--hi);outline-offset:1px}
+nav .bd{position:absolute;top:1px;left:calc(50% + 5px);min-width:18px;height:18px;border-radius:9px;background:var(--bad);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+.seg{display:flex;gap:6px;margin-bottom:12px}.seg button{flex:1;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:11px;padding:9px 4px;font:600 13px Figtree,sans-serif;cursor:pointer}.seg button.on{background:var(--accent);color:var(--onaccent);border-color:var(--accent)}
+.seg button:focus-visible{outline:3px solid var(--hi)}
+
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.gear{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;margin-top:2px}
+.gear:focus-visible{outline:3px solid var(--hi)}
+.chip.wn{background:#FFF1D0;color:#8A5A00}.chip.nt{background:var(--line);color:var(--mute)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip.wn{background:#4A3A12;color:#F4B223}}
+:root[data-theme="dark"] .chip.wn{background:#4A3A12;color:#F4B223}
+.mrow{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-top:1px solid var(--line)}.mrow:first-child{border-top:0}
+.mchips{display:flex;flex-wrap:wrap;gap:6px}.mc{padding:7px 11px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 12px Figtree,sans-serif;cursor:pointer}
+.mc.on{background:var(--accent);color:var(--onaccent);border-color:var(--accent)}.mc.full{opacity:.4;cursor:default}.mc:focus-visible{outline:3px solid var(--hi)}
+.sres{display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<header><div><h1 id="ttl">Brilliant Classes Sukhpura</h1><p id="cen"></p></div><button class="gear" id="gear" aria-label="Settings" onclick="openSettings()"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button></header>
+<main id="app"></main>
+<div id="toast" role="status"></div>
+<nav role="tablist" id="nav"></nav>
+<script>
+const KEY="brilliant-data-v1",CK="brilliant-cfg-v1";
+const NATIVE=!!(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform()),NP=(window.Capacitor&&Capacitor.Plugins)||{};
+const CLS=["9","10","11","12"],CL=c=>c+"th";
+const VER=(document.querySelector('meta[name="app-version"]')||{}).content||"0";
+let S=[],RC=0,CFG={school:"Brilliant Classes Sukhpura",upi:"",qr:""};
+const pad=n=>String(n).padStart(2,"0");
+const today=()=>{const d=new Date();return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())};
+const curYM=()=>today().slice(0,7);
+const okYM=v=>/^\d{4}-(0[1-9]|1[0-2])$/.test(v||"");
+const monthsBetween=(a,b)=>{const o=[];let[y,m]=a.split("-").map(Number);const[y2,m2]=b.split("-").map(Number);while((y<y2||(y===y2&&m<=m2))&&o.length<600){o.push(y+"-"+pad(m));m++;if(m>12){m=1;y++}}return o};
+const addM=(k,n)=>{let y=+k.slice(0,4),m=+k.slice(5)+n;y+=Math.floor((m-1)/12);m=((m-1)%12+12)%12+1;return y+"-"+pad(m)};
+const MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const HM=["जनवरी","फरवरी","मार्च","अप्रैल","मई","जून","जुलाई","अगस्त","सितंबर","अक्टूबर","नवंबर","दिसंबर"];
+const mname=k=>MN[+k.slice(5)-1]+" "+k.slice(0,4),mshort=k=>MN[+k.slice(5)-1];
+const sessOf=k=>{const y=+k.slice(0,4),m=+k.slice(5);return m>=4?y:y-1},sessLabel=y=>y+"-"+String(y+1).slice(2),sessMonths=y=>monthsBetween(y+"-04",(y+1)+"-03");
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const un=t=>String(t).replace(/&quot;/g,'"').replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&amp;/g,"&");
+const inr=n=>"₹"+Number(n).toLocaleString("en-IN");
+const wa=(p,t)=>"https://wa.me/91"+p+"?text="+encodeURIComponent(t);
+const cancelled=e=>/cancel|dismiss|abort/i.test(String(e&&(e.name||"")+" "+(e&&(e.message||e))));
+const RNO=n=>"BC-"+String(n).padStart(4,"0");
+function norm(s){s.cls=String(s.cls);s.fee=+s.fee||0;s.open=+s.open||0;if(!okYM(s.start))s.start=curYM();s.log=s.log&&typeof s.log==="object"?s.log:{};s.pay=(Array.isArray(s.pay)?s.pay:[]).filter(p=>p&&typeof p==="object").map(p=>({...p,a:+p.a||0}));return s}
+/* old payments (no month split) are spread over the oldest unpaid months, once */
+function fixPay(s){const old=s.pay.filter(p=>!p.alloc).sort((a,b)=>a.id-b.id);if(!old.length)return false;
+const pm={};let used=0;s.pay.forEach(p=>{if(p.alloc&&!p.void){used+=p.openAlloc||0;for(const k in p.alloc)pm[k]=(pm[k]||0)+p.alloc[k]}});let openLeft=Math.max(0,s.open-used);
+old.forEach(p=>{let left=p.a;p.alloc={};p.openAlloc=Math.min(openLeft,left);openLeft-=p.openAlloc;left-=p.openAlloc;let k=s.start,g=0;while(left>0&&g<400){const room=s.fee-(pm[k]||0);if(room>0){const t=Math.min(room,left);p.alloc[k]=t;pm[k]=(pm[k]||0)+t;left-=t}k=addM(k,1);g++}p.months=Object.keys(p.alloc).sort();p.mode=p.mode||"Cash";p.note=p.note||"";p.void=!!p.void});return true}
+function assignR(){const L=[];S.forEach(s=>s.pay.forEach(p=>{if(!p.rno)L.push(p)}));L.sort((a,b)=>a.id-b.id).forEach(p=>{p.rno=RNO(++RC)});return L.length>0}
+let migrated=false;
+try{const o=JSON.parse(localStorage.getItem(KEY));if(o&&Array.isArray(o.students)){S=o.students.filter(s=>s&&typeof s==="object").map(norm);RC=+o.rc||0}}catch(e){}
+try{const c=JSON.parse(localStorage.getItem(CK));if(c&&typeof c==="object")CFG={...CFG,...c}}catch(e){}
+S.forEach(s=>s.pay.forEach(p=>{const n=+String(p.rno||"").slice(3);if(n>RC)RC=n}));
+S.forEach(s=>{if(fixPay(s))migrated=true});if(assignR())migrated=true;
+function save(){try{localStorage.setItem(KEY,JSON.stringify({v:2,students:S,rc:RC}))}catch(e){toast("Could not save. Phone storage may be full.")}}
+function saveCfg(quiet){if(!String(CFG.school).trim())CFG.school="Brilliant Classes Sukhpura";try{localStorage.setItem(CK,JSON.stringify(CFG));if(quiet!==true)toast("Settings saved")}catch(e){toast("Could not save settings. The QR image may be too large.")}render()}
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove("show"),2800)}
+if(migrated)save();
+
+/* ---------- fee engine (everything comes from the saved payments) ---------- */
+function paidMap(s){const m={},d={};s.pay.forEach(p=>{if(p.void)return;for(const k in p.alloc){m[k]=(m[k]||0)+p.alloc[k];if(!d[k]||p.d>d[k])d[k]=p.d}});return{m,d}}
+const openPaidOf=s=>s.pay.reduce((a,p)=>p.void?a:a+(p.openAlloc||0),0),openRoom=s=>Math.max(0,s.open-openPaidOf(s));
+function ledger(s){const cur=curYM(),pm=paidMap(s),op=openPaidOf(s),due=monthsBetween(s.start,cur);
+const rows=due.map(k=>({m:k,due:s.fee,paid:pm.m[k]||0,date:pm.d[k]||""}));
+const adv=Object.keys(pm.m).filter(k=>k>cur).sort().map(k=>({m:k,due:s.fee,paid:pm.m[k],date:pm.d[k]||""}));
+const total=s.open+s.fee*due.length,paid=op+rows.reduce((a,r)=>a+r.paid,0),advance=adv.reduce((a,r)=>a+r.paid,0);
+return{rows,adv,open:s.open,openPaid:op,total,paid,balance:total-paid,advance,pm}}
+const pendOf=s=>Math.max(0,ledger(s).balance);
+function mstat(k,paid,due){if(k>curYM())return paid>=due?"adv":paid>0?"advp":"up";return paid>=due?"paid":paid>0?"part":"pend"}
+const SL={paid:["Paid","ok"],part:["Partial Paid","wn"],pend:["Pending",""],adv:["Advance Paid","ok"],advp:["Advance (Partial)","wn"],up:["Upcoming","nt"]};
+const chipS=k=>'<span class="chip '+SL[k][1]+'">'+SL[k][0]+"</span>";
+function ranges(keys){keys=[...keys].sort();const o=[];let a=null,b=null;keys.forEach(k=>{if(a&&addM(b,1)===k)b=k;else{if(a)o.push([a,b]);a=b=k}});if(a)o.push([a,b]);return o}
+const rtext=r=>r[0]===r[1]?mname(r[0]):mname(r[0])+" – "+mname(r[1]);
+const rngTxt=(keys,n)=>{if(!keys.length)return"–";return ranges(keys).map(rtext).join(", ")+(n?" ("+keys.length+(keys.length===1?" Month":" Months")+")":"")};
+function periods(g){return{paidK:g.rows.filter(r=>r.paid>=r.due).map(r=>r.m),partK:g.rows.filter(r=>r.paid>0&&r.paid<r.due).map(r=>r.m),pendK:g.rows.filter(r=>r.paid===0).map(r=>r.m),advK:g.adv.map(r=>r.m)}}
+const pendKeys=g=>g.rows.filter(r=>r.paid<r.due).map(r=>r.m);
+const hmn=k=>HM[+k.slice(5)-1]+(k.slice(0,4)!==curYM().slice(0,4)?" "+k.slice(0,4):"");
+const hj=a=>a.length<2?(a[0]||""):a.slice(0,-1).join(", ")+" और "+a[a.length-1];
+function hlist(keys,earlier){const it=[];if(earlier)it.push("पिछला बकाया");ranges(keys).forEach(r=>{const ms=monthsBetween(r[0],r[1]);if(ms.length>=4)it.push(hmn(r[0])+" से "+hmn(r[1])+" तक");else ms.forEach(k=>it.push(hmn(k)))});return hj(it)}
+function allocate(s,sel,openSel,amount){let left=amount;const pm=paidMap(s).m,alloc={};let openAlloc=0;
+if(openSel){const t=Math.min(openRoom(s),left);openAlloc=t;left-=t}
+const order=[...sel].sort();for(const k of order){if(left<=0)break;const room=Math.max(0,s.fee-(pm[k]||0)),t=Math.min(room,left);if(t>0){alloc[k]=t;left-=t}}
+let k=addM(order.length?order[order.length-1]:curYM(),1),g=0;while(left>0&&g<36){const room=Math.max(0,s.fee-(pm[k]||0)-(alloc[k]||0));if(room>0){const t=Math.min(room,left);alloc[k]=(alloc[k]||0)+t;left-=t}k=addM(k,1);g++}
+return{alloc,openAlloc,left}}
+const selRoom=(s,sel,openSel)=>{const pm=paidMap(s).m;return sel.reduce((a,k)=>a+Math.max(0,s.fee-(pm[k]||0)),0)+(openSel?openRoom(s):0)};
+const fmsg=s=>{const g=ledger(s),b=Math.max(0,g.balance),ms=hlist(pendKeys(g),g.openPaid<g.open);return "प्रिय अभिभावक, आपके बच्चे "+un(s.n)+" की "+ms+" महीने की फीस बाकी है। कुल बकाया फीस "+inr(b)+" है। कृपया फीस जमा करें।"+(CFG.upi?" UPI ID: "+CFG.upi+"।":"")+" धन्यवाद – "+CFG.school};
+const rmsg=(s,p)=>{const g=ledger(s),b=Math.max(0,g.balance),paid=rngTxt(p.months)+(p.openAlloc?(p.months.length?" + ":"")+"पिछला बकाया":"");return "प्रिय अभिभावक, "+un(s.n)+" की फीस "+inr(p.a)+" ("+paid+") प्राप्त हुई। रसीद नं. "+p.rno+"। "+(b>0?"बाकी फीस "+inr(b)+" ("+hlist(pendKeys(g),g.openPaid<g.open)+")।":"अब कोई फीस बाकी नहीं है।")+" धन्यवाद – "+CFG.school};
+const amsg=(s,d)=>"नमस्ते, "+un(s.n)+" "+(d===today()?"आज":d+" को")+" स्कूल में अनुपस्थित था। – "+CFG.school;
+const inClass=c=>S.filter(s=>s.cls===c).sort((a,b)=>a.n.localeCompare(b.n));
+const TABS=["home",...CLS],tlabel=k=>k==="home"?"Home":CL(k);
+let tab="home",sec="fees",view=null,pm2={},adate=today(),saved=null,rc=null,pf=null,perr="",pdel=null,fd=null,err="",imp=false,del=null,Q="",cm=curYM(),lastPay={key:"",t:0},rep={kind:"fees",month:curYM(),cls:""};
+
+/* ---------- student fee page ---------- */
+function openStu(id,rno){view={k:"stu",id,sess:sessOf(curYM()),rno:rno||""};pf=null;perr="";pdel=null;render();window.scrollTo(0,0)}
+function closeView(){view=null;pf=null;render();window.scrollTo(0,0)}
+function openSettings(){view={k:"set"};pf=null;render();window.scrollTo(0,0)}
+function sessGo(n){view.sess+=n;render()}
+function openPay(id){const s=S.find(x=>x.id===id),g=ledger(s),pk=pendKeys(g),orm=openRoom(s),sel=orm>0?[]:(pk.length?[pk[0]]:[addM(curYM(),1)]);
+view={k:"stu",id,sess:sessOf(sel[0]||curYM()),rno:""};pdel=null;
+pf={id,sess:view.sess,sel,openSel:orm>0,date:today(),mode:"Cash",note:"",amt:"",touched:false,rm:"chips",from:sel[0]||s.start,to:sel[0]||s.start};pf.amt=String(selRoom(s,pf.sel,pf.openSel));perr="";render();window.scrollTo(0,0)}
+function pfSync(){const s=S.find(x=>x.id===pf.id);if(!pf.touched)pf.amt=String(selRoom(s,pf.sel,pf.openSel))}
+function togM(k){const i=pf.sel.indexOf(k);if(i>-1)pf.sel.splice(i,1);else pf.sel.push(k);pf.sel.sort();pfSync();render()}
+function togOpen(){pf.openSel=!pf.openSel;pfSync();render()}
+function pfSess(n){pf.sess+=n;render()}
+function pfRange(){const s=S.find(x=>x.id===pf.id);let a=pf.from,b=pf.to;if(a>b)[a,b]=[b,a];const pm=paidMap(s).m;pf.sel=monthsBetween(a,b).filter(k=>k>=s.start);pfSync();render()}
+function pfAllPending(){const s=S.find(x=>x.id===pf.id);pf.sel=pendKeys(ledger(s));pf.openSel=openRoom(s)>0;pfSync();render()}
+function pfail(m){perr=m;render()}
+function payForm(s,g){const pmm=g.pm.m,orm=openRoom(s),mons=sessMonths(pf.sess).filter(k=>k>=s.start);
+const chips=(orm>0?`<button class="mc ${pf.openSel?"on":""}" onclick="togOpen()">Earlier balance ${inr(orm)}</button>`:"")+mons.map(k=>{const full=(pmm[k]||0)>=s.fee,on=pf.sel.includes(k);return `<button class="mc ${on?"on":""} ${full?"full":""}" ${full?"disabled":`onclick="togM('${k}')"`}>${mshort(k)}${full?" ✓":""}</button>`}).join("");
+const all=monthsBetween(s.start,addM(curYM(),23)),opt=v=>all.map(k=>`<option value="${k}" ${k===v?"selected":""}>${mname(k)}</option>`).join("");
+const picked=pf.sel.length?rngTxt(pf.sel,1):(pf.openSel?"":"None");
+return `<div class="card"><h3>Mark Paid</h3><div class="sub" style="margin:2px 0 8px">${s.n} · Class ${CL(s.cls)}</div>
+<label class="sub">Amount received (₹)<input type="number" inputmode="numeric" min="1" value="${esc(pf.amt)}" oninput="pf.amt=this.value;pf.touched=true"></label>
+<label class="sub">Payment date<input type="date" value="${pf.date}" max="${today()}" oninput="pf.date=this.value"></label>
+<div class="sub" style="margin:4px 0 6px">Which months?</div>
+<div class="seg"><button class="${pf.rm==="chips"?"on":""}" onclick="pf.rm='chips';render()">Select months</button><button class="${pf.rm==="range"?"on":""}" onclick="pf.rm='range';render()">From – To</button></div>
+${pf.rm==="chips"?`<div class="row" style="margin-bottom:6px"><button class="btn ghost sm" onclick="pfSess(-1)" aria-label="Previous session">◀</button><b>Session ${sessLabel(pf.sess)}</b><button class="btn ghost sm" onclick="pfSess(1)" aria-label="Next session">▶</button></div><div class="mchips">${chips}</div>`:`<label class="sub">From<select onchange="pf.from=this.value;pfRange()">${opt(pf.from)}</select></label><label class="sub">To<select onchange="pf.to=this.value;pfRange()">${opt(pf.to)}</select></label>`}
+<div class="sub" style="margin:8px 0">Selected: ${picked}${pf.openSel?(pf.sel.length?" + ":"")+"Earlier balance":""}</div>
+<button class="btn ghost sm" style="margin-bottom:10px" onclick="pfAllPending()">Select all pending</button>
+<div class="sub" style="margin-bottom:6px">Payment mode</div><div class="seg">${["Cash","UPI","Other"].map(m=>`<button class="${pf.mode===m?"on":""}" onclick="pf.mode='${m}';render()">${m}</button>`).join("")}</div>
+<label class="sub">Notes (optional)<input value="${esc(pf.note)}" maxlength="120" oninput="pf.note=this.value"></label>
+${perr?`<div class="chip" style="margin:6px 0">${perr}</div>`:""}
+<div style="display:flex;gap:8px;margin-top:8px"><button class="btn" onclick="savePay()">Save payment</button><button class="btn ghost" onclick="pf=null;perr='';render()">Cancel</button></div></div>`}
+function savePay(){const s=S.find(x=>x.id===pf.id),a=Math.round(+pf.amt);
+if(!(a>0))return pfail("Enter the amount received.");if(!/^\d{4}-\d{2}-\d{2}$/.test(pf.date)||pf.date>today())return pfail("Choose a valid date, not in the future.");
+if(!pf.sel.length&&!pf.openSel)return pfail("Select at least one month.");
+const al=allocate(s,pf.sel,pf.openSel,a);
+if(!Object.keys(al.alloc).length&&!al.openAlloc)return pfail("The selected months are already fully paid.");
+if(al.left>0)return pfail("Amount is too large. Reduce it or pay in parts.");
+const key=[s.id,a,pf.date,pf.sel.join(","),pf.openSel].join("|");if(lastPay.key===key&&Date.now()-lastPay.t<60000)return pfail("This payment was just saved. Not saving it twice.");
+const p={id:Date.now(),d:pf.date,a,mode:pf.mode,note:pf.note.trim().slice(0,120),rno:RNO(++RC),alloc:al.alloc,openAlloc:al.openAlloc,months:Object.keys(al.alloc).sort(),void:false};
+s.pay.push(p);lastPay={key,t:Date.now()};save();rc={id:s.id,pid:p.id};pf=null;perr="";toast("Payment saved · "+p.rno);render()}
+function voidPay(sid,pid){if(pdel===pid){const p=S.find(x=>x.id===sid).pay.find(x=>x.id===pid);p.void=true;p.voidDate=today();pdel=null;save();toast("Payment cancelled. It stays in the history.")}else{pdel=pid;toast("Tap again to cancel this payment")}render()}
+function rcCard(){const s=rc&&S.find(x=>x.id===rc.id),p=s&&s.pay.find(x=>x.id===rc.pid);if(!p)return"";return `<div class="card"><div class="sub">Payment saved · ${p.rno}</div><div class="name" style="margin:2px 0 8px">${s.n} · ${inr(p.a)} received</div><a class="btn wa full" target="_blank" rel="noopener" onclick="rc=null;setTimeout(render,50)" href="${wa(s.wa,rmsg(s,p))}">Send receipt on WhatsApp</a><button class="btn ghost sm" onclick="rc=null;render()">Skip</button></div>`}
+function monthGrid(s,g){const sess=view.sess,ms=sessMonths(sess).filter(k=>k>=s.start),showOpen=s.open>0&&sess===sessOf(s.start);
+let h=`<div class="row" style="margin:6px 0"><button class="btn ghost sm" onclick="sessGo(-1)" aria-label="Previous session">◀</button><b>Session ${sessLabel(sess)}</b><button class="btn ghost sm" onclick="sessGo(1)" aria-label="Next session">▶</button></div><div class="card" style="padding-top:2px;padding-bottom:2px">`;
+if(!ms.length&&!showOpen)return h+'<div class="sub" style="padding:10px 0">No fee months in this session.</div></div>';
+if(showOpen){const op=g.openPaid;h+=`<div class="mrow"><div><div class="name">Earlier balance</div><div class="sub">Paid ${inr(op)} · Left ${inr(s.open-op)}</div></div>${chipS(op>=s.open?"paid":op>0?"part":"pend")}</div>`}
+ms.forEach(k=>{const paid=g.pm.m[k]||0;h+=`<div class="mrow"><div><div class="name">${mshort(k)} ${k.slice(0,4)}</div><div class="sub">Fee ${inr(s.fee)} · Paid ${inr(paid)} · Left ${inr(Math.max(0,s.fee-paid))}${g.pm.d[k]?" · "+g.pm.d[k]:""}</div></div>${chipS(mstat(k,paid,s.fee))}</div>`});
+return h+"</div>"}
+function payHist(s){const L=[...s.pay].sort((a,b)=>b.id-a.id);let h="<h2>Payment history</h2>";if(!L.length)return h+'<div class="card">No payments yet.</div>';
+return h+L.map(p=>{const ms=rngTxt(p.months)+(p.openAlloc?(p.months.length?" + ":"")+"Earlier balance":"");return `<div class="card" style="${p.void?"opacity:.6;":""}${view.rno===p.rno?"outline:2px solid var(--hi);":""}"><div class="name">${p.rno} · ${inr(p.a)}${p.void?' <span class="chip">Cancelled</span>':""}</div><div class="sub">${p.d} · ${esc(p.mode||"Cash")}</div><div class="sub" style="margin-top:4px">Months: ${ms}</div>${p.note?`<div class="sub">Note: ${esc(p.note)}</div>`:""}${p.void?"":`<div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap"><a class="btn wa sm" target="_blank" rel="noopener" href="${wa(s.wa,rmsg(s,p))}">Send receipt</a><button class="btn ghost sm" onclick="voidPay(${s.id},${p.id})">${pdel===p.id?"Confirm cancel":"Cancel payment"}</button></div>`}</div>`}).join("")}
+function stuPage(){const s=S.find(x=>x.id===view.id),g=ledger(s),P=periods(g),b=Math.max(0,g.balance),cur=curYM(),nx=addM(cur,1),nxp=g.pm.m[nx]||0,last=s.pay.filter(p=>!p.void).map(p=>p.d).sort().pop()||"–",rp=view.rno&&s.pay.find(p=>p.rno===view.rno);
+let h=`<button class="btn ghost sm" onclick="closeView()">← Back</button><div class="card" style="margin-top:10px"><div class="name" style="font-size:18px">${s.n}</div><div class="sub">Class ${CL(s.cls)} · +91 ${s.wa}</div></div>`;
+if(rp)h+=`<div class="card" style="outline:2px solid var(--hi)"><div class="sub">Receipt ${rp.rno}${rp.void?" (cancelled)":""}</div><div class="name">${inr(rp.a)} · ${rp.d} · ${esc(rp.mode||"Cash")}</div><div class="sub">Months: ${rngTxt(rp.months)}${rp.openAlloc?(rp.months.length?" + ":"")+"Earlier balance":""}</div></div>`;
+const R=(a,v)=>`<div class="row" style="padding:3px 0"><span class="sub">${a}</span><b>${v}</b></div>`;
+h+=`<div class="sum"><b>${inr(b)}</b><span>fee remaining till ${mname(cur)}</span></div><div class="card">${R("Total fee (till this month)",inr(g.total))}${R("Fee paid",inr(g.paid))}${R("Remaining fee",inr(b))}${R("Monthly fee",inr(s.fee))}${R("Last payment date",last)}${R("Next month ("+mname(nx)+")",inr(s.fee)+" · "+SL[mstat(nx,nxp,s.fee)][0])}${g.advance>0?R("Advance paid",inr(g.advance)):""}${g.open>0?R("Earlier balance left",inr(g.open-g.openPaid)):""}</div>`;
+h+=`<div class="card"><div class="sub">Fee paid</div><div style="margin-bottom:6px">${rngTxt(P.paidK,1)}</div><div class="sub">Partial paid</div><div style="margin-bottom:6px">${rngTxt(P.partK,1)}</div><div class="sub">Fee pending</div><div style="margin-bottom:6px">${rngTxt(P.pendK,1)}</div>${P.advK.length?`<div class="sub">Advance paid</div><div style="margin-bottom:6px">${rngTxt(P.advK,1)}</div>`:""}<div style="display:flex;gap:6px;flex-wrap:wrap"><span class="chip ok">Paid ${P.paidK.length}</span><span class="chip wn">Partial ${P.partK.length}</span><span class="chip">Pending ${P.pendK.length}</span></div></div>`;
+h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button class="btn" onclick="openPay(${s.id})">Mark Paid</button>${b>0?`<a class="btn wa" target="_blank" rel="noopener" href="${wa(s.wa,fmsg(s))}">Remind</a>`:""}${b>0&&CFG.qr?`<button class="btn ghost" onclick="shareQR(${s.id})">Send QR</button>`:""}</div>`;
+if(pf&&pf.id===s.id)h+=payForm(s,g);
+return h+"<h2>Month-wise fees</h2>"+monthGrid(s,g)+payHist(s)}
+
+/* ---------- class views ---------- */
+const emptyC=c=>'<div class="card">No students in Class '+CL(c)+' yet. Open the <b>Students</b> section to add them.</div>';
+function classSummary(c){const L=inClass(c).filter(s=>s.start<=cm);let pa=0,pt=0,pe=0,tf=0,col=0;L.forEach(s=>{const paid=paidMap(s).m[cm]||0,st=mstat(cm,paid,s.fee);tf+=s.fee;col+=paid;if(st==="paid"||st==="adv")pa++;else if(st==="part"||st==="advp")pt++;else pe++});
+return `<div class="card"><label class="sub">Month report<input type="month" value="${cm}" max="${curYM()}" onchange="cm=okYM(this.value)?this.value:curYM();render()"></label><table class="tbl" style="margin-top:6px"><tr><td class="sub">Students</td><td><b>${L.length}</b></td><td class="sub">Paid</td><td><b>${pa}</b></td></tr><tr><td class="sub">Partial</td><td><b>${pt}</b></td><td class="sub">Pending</td><td><b>${pe}</b></td></tr><tr><td class="sub">Total fee</td><td><b>${inr(tf)}</b></td><td class="sub">Collected</td><td><b>${inr(col)}</b></td></tr><tr><td class="sub">Remaining</td><td colspan="3"><b>${inr(Math.max(0,tf-col))}</b></td></tr></table></div>`}
+function feeCard(s,g){const b=Math.max(0,g.balance),P=periods(g);
+return `<div class="card"><div class="row"><div><div class="name">${s.n}</div><div class="sub">${inr(s.fee)}/month · paid ${inr(g.paid)} of ${inr(g.total)}</div></div>${b>0?`<span class="chip">${inr(b)} baaki</span>`:'<span class="chip ok">Clear</span>'}</div>${b>0?`<div class="sub" style="margin-top:4px">Pending: ${rngTxt([...P.pendK,...P.partK],0)}</div>`:""}<div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap"><button class="btn sm" onclick="openPay(${s.id})">Mark Paid</button><button class="btn ghost sm" onclick="openStu(${s.id})">Details</button>${b>0?`<a class="btn wa sm" target="_blank" rel="noopener" href="${wa(s.wa,fmsg(s))}">Remind</a>${CFG.qr?`<button class="btn ghost sm" onclick="shareQR(${s.id})">Send QR</button>`:""}`:""}</div></div>`}
+function feesView(c){const L=inClass(c).map(s=>({s,g:ledger(s)}));if(!L.length)return emptyC(c);
+const pend=L.reduce((a,x)=>a+Math.max(0,x.g.balance),0),np=L.filter(x=>x.g.balance>0).length;
+L.sort((a,b)=>(b.g.balance>0?1:0)-(a.g.balance>0?1:0)||a.s.n.localeCompare(b.s.n));
+return `<div class="sum"><b>${inr(pend)}</b><span>pending from ${np} of ${L.length} students in Class ${CL(c)}</span></div>`+classSummary(c)+L.map(x=>feeCard(x.s,x.g)).join("")}
+const pkey=s=>adate+":"+s.id,pmark=s=>pm2[pkey(s)]||(s.log&&s.log[adate])||"P";
+function attView(c){const L=inClass(c);if(!L.length)return emptyC(c);const done=L.every(s=>s.log&&s.log[adate]);
+let h=`<label class="sub">Date<input type="date" value="${adate}" max="${today()}" onchange="adate=this.value||today();saved=null;render()"></label><div style="margin-bottom:8px">${done?'<span class="chip ok">Saved for this date</span>':'<span class="chip">Not saved yet</span>'}</div>`;
+h+=L.map(s=>`<div class="card row"><div class="name">${s.n}</div><div class="pa"><button class="p ${pmark(s)==="P"?"on":""}" aria-label="Present" onclick="mark(${s.id},'P')">P</button><button class="a ${pmark(s)==="A"?"on":""}" aria-label="Absent" onclick="mark(${s.id},'A')">A</button></div></div>`).join("");
+const ab=L.filter(s=>pmark(s)==="A").length;
+h+=`<button class="btn full" onclick="saveAtt('${c}')">Save attendance${ab?" ("+ab+" absent)":""}</button>`;
+if(saved&&saved.c===c&&saved.d===adate)h+=saved.l.length?"<h2>Absent alerts ready</h2>"+saved.l.map(s=>`<div class="card row"><div><div class="name">${s.n}</div><div class="sub">Absent</div></div><a class="btn wa sm" target="_blank" rel="noopener" href="${wa(s.wa,amsg(s,adate))}">Send alert</a></div>`).join(""):'<div class="card"><span class="chip ok">Saved</span> Everyone was present.</div>';
+return h}
+function mark(id,v){const s=S.find(x=>x.id===id);pm2[pkey(s)]=v;saved=null;render()}
+function saveAtt(c){const L=inClass(c);L.forEach(s=>{s.log[adate]=pmark(s)});save();saved={c,d:adate,l:L.filter(s=>pmark(s)==="A")};toast("Attendance saved for "+adate);render()}
+const blank=()=>({n:"",wa:"",fee:"",start:curYM(),open:""});
+function stuView(c){let h=`<div class="row" style="margin-bottom:10px"><div class="sub">${inClass(c).length} students in Class ${CL(c)}</div><div style="display:flex;gap:8px"><button class="btn sm" onclick="fd=blank();err='';imp=false;render()">Add student</button><button class="btn ghost sm" onclick="imp=!imp;fd=null;err='';render()">Import</button></div></div>`;
+if(fd)h+=`<div class="card"><h3>${fd.id!=null?"Edit student":"New student in Class "+CL(c)}</h3>`+[["n","Student name (English)","text"],["wa","Parent WhatsApp (10 digits)","tel"],["fee","Monthly fee (₹)","number"]].map(f=>`<label class="sub">${f[1]}<input type="${f[2]}" value="${esc(fd[f[0]])}" oninput="fd.${f[0]}=this.value"></label>`).join("")+`<label class="sub">Fees count from (month)<input type="month" value="${esc(fd.start)}" max="${curYM()}" oninput="fd.start=this.value"></label><label class="sub">Earlier balance, if any (₹, optional)<input type="number" inputmode="numeric" min="0" value="${esc(fd.open)}" oninput="fd.open=this.value"></label>${err?`<div class="chip" style="margin:6px 0">${err}</div>`:""}<div style="display:flex;gap:8px;margin-top:8px"><button class="btn" onclick="saveStu('${c}')">Save student</button><button class="btn ghost" onclick="fd=null;render()">Cancel</button></div></div>`;
+if(imp)h+=`<div class="card"><div class="sub" style="margin-bottom:6px">One student per line, or copy rows from a sheet: name, WhatsApp, fee (optional: from month like 2026-04, earlier balance)</div><textarea id="csvin" rows="5" placeholder="Riya Das, 9876500010, 1200"></textarea><button class="btn full" style="margin-top:8px" onclick="doImport('${c}')">Import into Class ${CL(c)}</button></div>`;
+h+=inClass(c).map(s=>`<div class="card"><div class="name">${s.n}</div><div class="sub">+91 ${s.wa} · ${inr(s.fee)}/month · from ${mname(s.start)}${s.open>0?" · earlier "+inr(s.open):""}</div><div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap"><button class="btn ghost sm" onclick="openStu(${s.id})">Fee details</button><button class="btn ghost sm" onclick="editStu(${s.id})">Edit</button><button class="btn ghost sm" onclick="delStu(${s.id})">${del===s.id?"Confirm delete":"Delete"}</button></div></div>`).join("");
+if(!inClass(c).length)h+='<div class="card">No students yet. Tap Add student, or Import many at once.</div>';
+return h}
+const nextId=()=>Math.max(0,...S.map(s=>s.id))+1;
+function sfail(m){err=m;render()}
+function saveStu(c){const n=fd.n.trim(),w=String(fd.wa).replace(/\D/g,"").slice(-10),fee=Math.round(+fd.fee),open=Math.round(+fd.open||0);
+if(!n)return sfail("Enter the student’s name.");if(w.length!==10)return sfail("Enter the parent’s 10-digit WhatsApp number.");if(!(fee>0))return sfail("Enter the monthly fee as a number.");if(!okYM(fd.start))return sfail("Choose the month fees count from.");if(open<0)return sfail("Earlier balance cannot be negative.");
+if(fd.id!=null){const s=S.find(x=>x.id===fd.id);Object.assign(s,{n:esc(n),wa:w,fee,start:fd.start,open})}else S.push(norm({id:nextId(),n:esc(n),cls:c,wa:w,fee,start:fd.start,open}));
+fd=null;err="";save();toast("Student saved");render()}
+function editStu(id){const s=S.find(x=>x.id===id);fd={id,n:un(s.n),wa:s.wa,fee:String(s.fee),start:s.start,open:s.open?String(s.open):""};err="";imp=false;render()}
+function delStu(id){if(del===id){S=S.filter(s=>s.id!==id);del=null;save();toast("Student deleted")}else{del=id;toast("Tap Delete again to confirm")}render()}
+function doImport(c){const L=document.getElementById("csvin").value.split("\n").map(x=>x.trim()).filter(Boolean);let ok=0,bad=0;
+L.forEach(l=>{const p=l.split(/[,\t]/).map(x=>x.trim()),n=p[0],w=(p[1]||"").replace(/\D/g,"").slice(-10),fee=Math.round(+p[2]);if(n&&w.length===10&&fee>0){S.push(norm({id:nextId(),n:esc(n),cls:c,wa:w,fee,start:okYM(p[3])?p[3]:curYM(),open:Math.max(0,Math.round(+p[4]||0))}));ok++}else bad++});
+save();imp=false;toast("Imported "+ok+" student"+(ok===1?"":"s")+(bad?", skipped "+bad+" with a missing name, number or fee":""));render()}
+
+/* ---------- Home ---------- */
+function sres(){const q=(Q||"").trim().toLowerCase();if(!q)return"";const dg=q.replace(/\D/g,""),n=dg?+dg:0,isR=/^(bc[- ]?)?\d+$/.test(q),rl=[];
+S.forEach(s=>s.pay.forEach(p=>{const r=p.rno.toLowerCase();if(r.includes(q)||(isR&&n>0&&+r.slice(3)===n))rl.push({s,p})}));
+const st=S.filter(s=>un(s.n).toLowerCase().includes(q)||(dg.length>=3&&s.wa.includes(dg))).slice(0,6);let h="";
+rl.slice(0,6).forEach(({s,p})=>{h+=`<button class="card sres" onclick="openStu(${s.id},'${p.rno}')"><div class="name">${p.rno} · ${s.n}${p.void?" (cancelled)":""}</div><div class="sub">Class ${CL(s.cls)} · ${p.d} · ${inr(p.a)} · ${esc(p.mode||"Cash")}</div><div class="sub">Fee remaining: ${inr(pendOf(s))}</div></button>`});
+st.forEach(s=>{h+=`<button class="card sres" onclick="openStu(${s.id})"><div class="name">${s.n}</div><div class="sub">Class ${CL(s.cls)} · Fee remaining: ${inr(pendOf(s))}</div></button>`});
+return h||'<div class="card sub">Nothing found.</div>'}
+function allFeesText(){const W=41,R=(c,n,t,j,b,s)=>String(c).padEnd(4)+" "+String(n).slice(0,11).padEnd(11)+" "+String(t).padStart(5)+" "+String(j).padStart(5)+" "+String(b).padStart(5)+" "+s;
+const L=[R("Cls","Student","Total","Jama","Baki","Status"),"-".repeat(W)];let GT=0,GJ=0,GB=0,pending=0;
+CLS.forEach(c=>{const m=inClass(c);if(!m.length)return;let T=0,J=0,B=0;m.forEach(s=>{const g=ledger(s),b=Math.max(0,g.balance);T+=g.total;J+=g.paid;B+=b;if(b>0)pending++;L.push(R(CL(c),un(s.n),g.total,g.paid,b,b>0?"Unpaid":"Paid"))});
+L.push(R("",CL(c)+" Total",T,J,B,""),"-".repeat(W));GT+=T;GJ+=J;GB+=B});
+L.push(R("","GRAND TOTAL",GT,GJ,GB,""));
+const d=new Date();return "*"+CFG.school.toUpperCase()+"*\nFee report – "+d.getDate()+" "+MN[d.getMonth()]+" "+d.getFullYear()+" (all fees till now)\n\n```\n"+L.join("\n")+"\n```\nUnpaid students: "+pending}
+async function shareText(t){try{if(NATIVE&&NP.Share){await NP.Share.share({text:t,dialogTitle:"Send to group"});return}if(navigator.share){await navigator.share({text:t});return}}catch(e){if(cancelled(e))return}
+try{await navigator.clipboard.writeText(t);toast("Copied. Paste it in your WhatsApp group.");return}catch(e){}
+window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank")}
+function sendAll(){if(!S.length){toast("No students yet");return}shareText(allFeesText())}
+function repData(){const k=rep.kind,m=rep.month,cls=rep.cls,cur=curYM(),L=S.filter(s=>!cls||s.cls===cls).sort((a,b)=>(+a.cls-+b.cls)||a.n.localeCompare(b.n)),sc=cls?"Class "+CL(cls):"All classes";let head,rows,title,file,sub=CFG.school+" - "+sc;
+if(k==="fees"){title="Fees report - "+mname(m);head=["Class","Student","Fee","Paid","Left","Status","Total pending"];rows=L.filter(s=>s.start<=m).map(s=>{const g=ledger(s),paid=g.pm.m[m]||0;return[CL(s.cls),un(s.n),s.fee,paid,Math.max(0,s.fee-paid),SL[mstat(m,paid,s.fee)][0],Math.max(0,g.balance)]});
+if(rows.length)rows.push(["","TOTAL",...[2,3,4].map(i=>rows.reduce((a,r)=>a+r[i],0)),"",rows.reduce((a,r)=>a+r[6],0)]);file="fees-"+m}
+else if(k==="csum"){title="Class fee summary - "+mname(m);head=["Class","Students","Paid","Partial","Pending","Total fee","Collected","Remaining"];
+rows=CLS.filter(c=>!cls||c===cls).map(c=>{const M=S.filter(s=>s.cls===c&&s.start<=m);let pa=0,pt=0,pe=0,tf=0,col=0;M.forEach(s=>{const paid=paidMap(s).m[m]||0,st=mstat(m,paid,s.fee);tf+=s.fee;col+=paid;if(st==="paid"||st==="adv")pa++;else if(st==="part"||st==="advp")pt++;else pe++});return[CL(c),M.length,pa,pt,pe,tf,col,Math.max(0,tf-col)]});
+if(rows.length)rows.push(["TOTAL",...[1,2,3,4,5,6,7].map(i=>rows.reduce((a,r)=>a+r[i],0))]);file="class-summary-"+m}
+else if(k==="matrix"){const y=sessOf(m),ms=sessMonths(y);title="Month-wise fees - Session "+sessLabel(y);head=["Class","Student",...ms.map(mshort),"Pending"];sub+="  P=Paid Pt=Partial -=Due A=Advance";
+rows=L.map(s=>{const g=ledger(s);return[CL(s.cls),un(s.n),...ms.map(x=>{if(x<s.start)return".";const p=g.pm.m[x]||0;if(x>cur)return p>=s.fee?"A":p>0?"a":".";return p>=s.fee?"P":p>0?"Pt":"-"}),Math.max(0,g.balance)]});file="monthwise-"+sessLabel(y)}
+else if(k==="att"){title="Attendance report - "+mname(m);head=["Class","Student","Present","Absent","Days marked","Percent"];rows=L.map(s=>{const d=Object.keys(s.log).filter(x=>x.slice(0,7)===m),p=d.filter(x=>s.log[x]==="P").length,a=d.length-p;return[CL(s.cls),un(s.n),p,a,d.length,d.length?Math.round(p/d.length*100)+"%":"-"]});file="attendance-"+m}
+else{title="Students list";head=["Class","Student","Parent WhatsApp","Monthly fee","Total pending"];rows=L.map(s=>[CL(s.cls),un(s.n),s.wa,s.fee,pendOf(s)]);file="students"}
+return{title,sub,head,rows,file:file+"-"+(cls?CL(cls):"all")}}
+function csvText(head,rows){const q=v=>{v=String(v);return/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};return[head,...rows].map(r=>r.map(q).join(",")).join("\r\n")}
+function makePDF(title,sub,head,rows){const ca=t=>String(t).replace(/[^\x20-\x7E]/g,"?"),pe=t=>t.replace(/\\/g,"\\\\").replace(/\(/g,"\\(").replace(/\)/g,"\\)");
+const w=head.map((h,i)=>Math.max(ca(h).length,...rows.map(r=>ca(r[i]).length))),GAP=2,MAX=96;let tot=w.reduce((a,b)=>a+b,0)+GAP*(w.length-1);while(tot>MAX){const i=w.indexOf(Math.max(...w));w[i]--;tot--}
+const num=head.map((h,i)=>rows.length>0&&rows.every(r=>/^(?=.*[0-9])[0-9.,%\-]+$/.test(String(r[i])))),fit=(t,i)=>{t=ca(t).slice(0,w[i]);return num[i]?t.padStart(w[i]):t.padEnd(w[i])},line=r=>r.map((c,i)=>fit(c,i)).join(" ".repeat(GAP));
+const hdr=line(head),rule="-".repeat(Math.min(tot,MAX)),body=rows.map(line),PER=58,pages=[];for(let i=0;i<Math.max(body.length,1);i+=PER)pages.push(body.slice(i,i+PER));
+const cont=pi=>{let s="BT\n/F2 13 Tf\n36 806 Td\n("+pe(ca(title))+") Tj\n/F1 9 Tf\n0 -16 Td\n12 TL\n("+pe(ca(sub))+" - page "+(pi+1)+" of "+pages.length+") Tj\nT*\nT*\n/F2 9 Tf\n("+pe(hdr)+") Tj\n/F1 9 Tf\nT*\n("+pe(rule)+") Tj\n";pages[pi].forEach(l=>{s+="T*\n("+pe(l)+") Tj\n"});return s+"ET"};
+const off=[];let out="%PDF-1.4\n";const add=b=>{off.push(out.length);out+=off.length+" 0 obj\n"+b+"\nendobj\n"};
+add("<< /Type /Catalog /Pages 2 0 R >>");add("<< /Type /Pages /Kids ["+pages.map((_,i)=>(6+2*i)+" 0 R").join(" ")+"] /Count "+pages.length+" >>");add("<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>");add("<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>");
+pages.forEach((_,i)=>{const c=cont(i);add("<< /Length "+c.length+" >>\nstream\n"+c+"\nendstream");add("<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents "+(5+2*i)+" 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>")});
+const x=out.length;out+="xref\n0 "+(off.length+1)+"\n0000000000 65535 f \n"+off.map(o=>String(o).padStart(10,"0")+" 00000 n \n").join("")+"trailer\n<< /Size "+(off.length+1)+" /Root 1 0 R >>\nstartxref\n"+x+"\n%%EOF";
+return Uint8Array.from(out,c=>c.charCodeAt(0))}
+async function outFile(name,mime,bytes){if(NATIVE&&NP.Filesystem&&NP.Share){let bin="";for(let i=0;i<bytes.length;i+=8192)bin+=String.fromCharCode.apply(null,bytes.subarray(i,i+8192));
+await NP.Filesystem.writeFile({path:name,data:btoa(bin),directory:"CACHE"});const u=(await NP.Filesystem.getUri({path:name,directory:"CACHE"})).uri;await NP.Share.share({title:name,files:[u]});return}
+const b=new Blob([bytes],{type:mime}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();a.remove()}
+async function doReport(fmt){const R=repData();if(!R.rows.length){toast("No data for this report");return}
+try{if(fmt==="pdf")await outFile(R.file+".pdf","application/pdf",makePDF(R.title,R.sub,R.head,R.rows));else await outFile(R.file+".csv","text/csv",new Uint8Array([0xEF,0xBB,0xBF,...new TextEncoder().encode(csvText(R.head,R.rows))]));toast("Report ready")}catch(e){if(!cancelled(e))toast("Could not create the report")}}
+function setMonth(v){rep.month=okYM(v)?v:curYM();render()}
+async function backup(){const nm="brilliant-backup-"+today()+".json";try{await outFile(nm,"application/json",new TextEncoder().encode(JSON.stringify({app:"brilliant",v:2,students:S,rc:RC,school:CFG.school,upi:CFG.upi},null,1)));toast("Backup ready")}catch(e){if(!cancelled(e))toast("Could not create the backup")}}
+function restore(f){if(!f)return;const r=new FileReader();r.onload=()=>{try{const o=JSON.parse(r.result);if(!o||!Array.isArray(o.students))throw 0;S=o.students.filter(s=>s&&typeof s==="object").map(norm);RC=+o.rc||0;S.forEach(s=>s.pay.forEach(p=>{const n=+String(p.rno||"").slice(3);if(n>RC)RC=n}));S.forEach(fixPay);assignR();if(o.school)CFG.school=String(o.school);if(typeof o.upi==="string")CFG.upi=o.upi;save();saveCfg(true);toast("Backup restored")}catch(e){toast("That file is not a Brilliant Classes backup")}};r.readAsText(f)}
+function pickQR(f){if(!f)return;const r=new FileReader();r.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,700/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=Math.round(i.width*k);c.height=Math.round(i.height*k);const x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height);x.drawImage(i,0,0,c.width,c.height);CFG.qr=c.toDataURL("image/jpeg",.9);saveCfg()};i.onerror=()=>toast("That file is not an image");i.src=r.result};r.readAsDataURL(f)}
+async function shareQR(id){const s=S.find(x=>x.id===id);if(!CFG.qr){toast("Add your payment QR in Settings (gear icon)");return}
+try{if(NATIVE&&NP.Filesystem&&NP.Share){await NP.Filesystem.writeFile({path:"payment-qr.jpg",data:CFG.qr.split(",")[1],directory:"CACHE"});const u=(await NP.Filesystem.getUri({path:"payment-qr.jpg",directory:"CACHE"})).uri;await NP.Share.share({text:fmsg(s),files:[u]});return}
+const b=await(await fetch(CFG.qr)).blob(),f=new File([b],"payment-qr.jpg",{type:b.type||"image/jpeg"});if(navigator.canShare&&navigator.canShare({files:[f]}))await navigator.share({files:[f],text:fmsg(s)});else toast("This phone cannot share images from the app")}catch(e){if(!cancelled(e))toast("Could not open sharing. Try again.")}}
+function homeView(){const mk=curYM();let col=0;S.forEach(s=>s.pay.forEach(p=>{if(!p.void&&p.d.slice(0,7)===mk)col+=p.a}));
+const pend=S.reduce((a,s)=>a+pendOf(s),0),pc=S.filter(s=>pendOf(s)>0).length,pct=col+pend?Math.round(col/(col+pend)*100):0;
+let h=`<label class="sub" style="margin-bottom:0">Search receipt no. or student<input id="qin" type="search" placeholder="e.g. BC-0007 or student name" value="${esc(Q)}" oninput="Q=this.value;document.getElementById('sres').innerHTML=sres()"></label><div id="sres" style="margin-top:8px">${sres()}</div>`;
+h+=`<div class="sum"><b>${inr(pend)}</b><span>total pending from ${pc} student${pc===1?"":"s"}</span></div><div class="grid"><div class="card"><div class="sub">Collected in ${mname(mk)}</div><div class="big" style="color:var(--ok)">${inr(col)}</div></div><div class="card"><div class="sub">Students</div><div class="big">${S.length}</div></div></div><div class="card"><div class="bar"><i style="width:${pct}%"></i></div><div class="sub" style="margin-top:6px">${pct}% of (collected + pending)</div></div>`;
+h+=`<button class="btn wa full" onclick="sendAll()">Send All Fees</button><h2>Class-wise fees</h2><div class="card">`+CLS.map(c=>{const m=inClass(c);return `<div class="row" style="padding:5px 0"><span class="name">${CL(c)}</span><span class="sub">${m.length} students · baki ${inr(m.reduce((a,s)=>a+pendOf(s),0))}</span></div>`}).join("")+"</div>";
+const R=repData(),sel=(v,o)=>o.map(x=>`<option value="${x[0]}" ${String(v)===String(x[0])?"selected":""}>${x[1]}</option>`).join("");
+h+=`<h2>Reports</h2><div class="card"><label class="sub">Report<select onchange="rep.kind=this.value;render()">${sel(rep.kind,[["fees","Fees (paid and pending)"],["csum","Class fee summary"],["matrix","Month-wise fees (session)"],["att","Attendance (month)"],["list","Students list"]])}</select></label>${rep.kind!=="list"?`<label class="sub">Month<input type="month" value="${rep.month}" max="${curYM()}" onchange="setMonth(this.value)"></label>`:""}<label class="sub">Class<select onchange="rep.cls=this.value;render()">${sel(rep.cls,[["","All classes"],...CLS.map(c=>[c,CL(c)])])}</select></label><div style="display:flex;gap:8px;margin-bottom:10px"><button class="btn" style="flex:1" onclick="doReport('pdf')">Download PDF</button><button class="btn ghost" style="flex:1" onclick="doReport('csv')">Download Excel</button></div>`;
+h+=R.rows.length?`<div class="wrap"><table class="tbl"><tr>${R.head.map(x=>"<th>"+x+"</th>").join("")}</tr>${R.rows.slice(0,8).map(r=>"<tr>"+r.map(x=>"<td>"+esc(x)+"</td>").join("")+"</tr>").join("")}</table></div>${R.rows.length>8?`<div class="sub" style="margin-top:6px">+ ${R.rows.length-8} more rows in the file</div>`:""}`:'<div class="sub">No data for this report yet.</div>';
+return h+"</div>"}
+function checkUpd(){if(window.__ota)window.__ota.check().then(toast);else toast("Live updates work inside the Android app only.")}
+function setPage(){return `<button class="btn ghost sm" onclick="closeView()">← Back</button><h2>Settings</h2><div class="card"><label class="sub">School name (used in messages)<input value="${esc(CFG.school)}" oninput="CFG.school=this.value"></label><label class="sub">Your UPI ID (added to fee reminders)<input value="${esc(CFG.upi)}" placeholder="name@upi" oninput="CFG.upi=this.value.trim()"></label><div class="sub">Payment QR image</div>${CFG.qr?`<img src="${CFG.qr}" alt="Payment QR" style="width:120px;height:120px;object-fit:contain;background:#fff;border-radius:8px;margin:6px 0;display:block">`:""}<button class="btn ghost sm" style="margin:6px 0" onclick="document.getElementById('qrf').click()">${CFG.qr?"Change QR image":"Choose QR image"}</button><input id="qrf" type="file" accept="image/*" aria-hidden="true" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" onchange="pickQR(this.files[0]);this.value=''"><button class="btn full" onclick="saveCfg()">Save settings</button></div><div class="card"><div class="sub" style="margin-bottom:8px">Backup keeps your data safe if you change phone or reinstall the app.</div><div style="display:flex;gap:8px"><button class="btn ghost sm" onclick="backup()">Download backup</button><button class="btn ghost sm" onclick="document.getElementById('bkf').click()">Restore</button><input id="bkf" type="file" accept=".json,application/json" aria-hidden="true" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" onchange="restore(this.files[0]);this.value=''"></div></div><div class="card"><div class="sub" style="margin-bottom:8px">App version ${VER}</div><button class="btn ghost sm" onclick="checkUpd()">Check for updates</button></div>`}
+
+/* ---------- shell ---------- */
+const IC={home:'<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/>',cls:'<path d="M3 5.5c3-1 6-.7 9 1.3 3-2 6-2.3 9-1.3v13c-3-1-6-.7-9 1.3-3-2-6-2.3-9-1.3z"/><path d="M12 6.8v13"/>'};
+function nav(){document.getElementById("nav").innerHTML=TABS.map(k=>{const b=k==="home"?0:inClass(k).filter(s=>pendOf(s)>0).length;return `<button role="tab" aria-selected="${tab===k&&!view}" onclick="go('${k}')"><svg viewBox="0 0 24 24" aria-hidden="true">${k==="home"?IC.home:IC.cls}</svg>${tlabel(k)}${b?`<span class="bd" aria-label="${b} pending">${b}</span>`:""}</button>`}).join("")}
+function go(k){tab=k;view=null;pf=null;render();window.scrollTo(0,0)}
+function setSec(v){sec=v;render()}
+function render(){if(view&&view.k==="stu"&&!S.find(x=>x.id===view.id))view=null;
+try{if(!view)history.replaceState(null,"","#"+tlabel(tab).toLowerCase()+(tab!=="home"&&sec!=="fees"?"-"+sec:""))}catch(e){}
+const t=document.getElementById("ttl"),c=document.getElementById("cen");if(t)t.textContent=CFG.school;if(c)c.textContent=mname(curYM());
+let h=rcCard();
+if(view&&view.k==="set")h+=setPage();else if(view&&view.k==="stu")h+=stuPage();else if(tab==="home")h+=homeView();
+else h+=`<h2 style="margin:0 0 10px">Class ${CL(tab)}</h2><div class="seg" role="tablist">`+[["fees","Fees"],["att","Attendance"],["stu","Students"]].map(x=>`<button class="${sec===x[0]?"on":""}" onclick="setSec('${x[0]}')">${x[1]}</button>`).join("")+"</div>"+(sec==="fees"?feesView(tab):sec==="att"?attView(tab):stuView(tab));
+document.getElementById("app").innerHTML=h;nav()}
+(()=>{const p=location.hash.slice(1).split("-"),k=TABS.find(x=>tlabel(x).toLowerCase()===p[0]);if(k)tab=k;if(["att","stu"].includes(p[1]))sec=p[1]})();
+render();
+try{localStorage.setItem("bc-ok",VER)}catch(e){}
+
+</script>
+</body>
+</html>
